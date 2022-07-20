@@ -34,7 +34,6 @@ const BasketScreen = () => {
     }, {});
 
     setGroupedItemsInBasket(groupedItems);
-    console.log('HEY BADBA', groupedItemsInBasket);
   }, [items]);
 
   return (
@@ -110,7 +109,10 @@ const BasketScreen = () => {
               <Currency quantity={basketTotal + 5.99} currency='GBP' />
             </Text>
           </View>
-          <TouchableOpacity className='rounded-lg bg-[#00CCBB] p-4'>
+          <TouchableOpacity
+            className='rounded-lg bg-[#00CCBB] p-4'
+            onPress={() => navigation.navigate('PreparingOrder')}
+          >
             <Text className='text-center text-white text-lg font-bold'>
               Place Order
             </Text>
